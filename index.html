@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Solway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <title>Query</title>
+  </head>
+  <body>
+    <!-- Start header -->
+    <header class="top-header">
+      <nav class="navbar header-nav navbar-expand-lg">
+          <div class="container-fluid">
+            <nav class="navbar ">
+              <span class="navbar-brand mb-0 h1">Kamtina Musyfirah</span>
+            </nav>
+
+              <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                  <ul class="navbar-nav">
+                      <li><a class="nav-link active" href="#">Home</a></li>
+                      <li><a class="nav-link" href="#">Query</a></li>
+                      <li><a class="nav-link" href="#">About</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+  <!-- End header -->
+
+  <!--Carousel-->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Basis Data II</h1>
+    </div>
+  </div>
+  <!--End Carousel-->
+
+<!-- section -->
+<div class="container utama">
+<div class="section dark_bg" id="definisi">
+  <div class="container-fluid">
+     <!-- section -->
+      <div class="section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div class="heading_main text_align_left">
+              <div class="left">
+                <p class="section_count">01</p>
+              </div>
+              <div class="right">
+                <p class="small_tag">--------</p>
+                    <h2><span class="white_fonts">Query Processing</span> dalam <span class="white_fonts">Basis Data</span> </h2>
+                    <p class="large">Apa itu query?</p>
+              </div>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section -->
+
+    <!-- section -->
+      <div class="row">
+          <div class="col-lg-12 col-md-12 white_fonts layout_padding padding_0">
+              <p>
+                <i>Query</i>  adalah sebuah ekspresi bahasa yang menggambarkan data yang akan didapatkan kembali dari sebuah <i>database</i>.
+                <i>Query</i> juga bisa diartikan sebagai kemampuan <i>database</i> pada komputer untuk menampilkan atau menyimpan informasi tertentu.
+                Namun perlu diketahui bahwa kemampuan tersebut hanya berupa <i>pre-defined code</i> artinya jika permintaan tidak sesuai dengan 
+                informasi yang tersimpan di <i>database</i>, maka permintaan tidak dapat diproses. Umumnya, <i>query</i> dibagi dalam dua jenis yaitu :
+                <ol>
+                  <li><i>Select Query</i></li>
+                  <p>
+                    merupakan permintaan atas suatu informasi yang tersimpan dalam database.
+                  </p>
+                  <li><i>Action Query</i></li>
+                  <p>
+                    merupakan kegiatan <i>updating</i> (pembaharuan), <i>insert</i> (penambahan) 
+                    maupun penghapusan sebagian atau keseluruhan informasi dalam <i>database</i>.
+                  </p>
+                </ol>
+              </p>
+          </div>
+      </div>
+    <!-- end section -->
+
+    <!-- section -->
+    <div class="section layout_padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="full">
+                      <div class="heading_main text_align_left">
+            <div class="left">
+              <p class="section_count">02</p>
+            </div>
+            <div class="right">
+              <p class="small_tag">--------</p>
+                  <h2><span class="white_fonts">Query Processing</span> dalam <span class="white_fonts">Basis Data</span> </h2>
+                  <p class="large">Bagaimana mengukur biaya sebuah query?</p>
+            </div>	
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end section -->
+
+  <!-- section -->
+<div class="container">
+  <div class="section" id="definisi">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 white_fonts layout_padding padding_0">
+          <p>
+            <i>Optimizer query</i> akan membuat informasi statistik yang tersimpan dalam katalog 
+            DBMS untuk memperkirakan besarnya biaya dari sebuah rencana <i>query</i>. Informasi yang tersimpan meliputi:
+            <ol>
+              <li>Banyaknya baris data (<i>record</i>) dalam sebuah tabel</li>
+              <li>Banyaknya blok berisi baris data dalam tabel</li>
+              <li>Ukuran setiap baris data dari tabel (satuan <i>byte</i>)</li>
+              <li>Banyaknya nilai unik dalam tabel untuk suatu atribut</li>
+            </ol>
+            Ada beberapa kemungkinan rencana evaluasi untuk sebuah <i>query</i>, dan itu penting untuk bisa
+            membandingkan alternatif dalam hal biaya (perkiraan) dan memilih rencana terbaik.
+            Untuk melakukannya, kita harus memperkirakan biaya operasi individu dan menggabungkannya untuk mendapatkannya
+            biaya rencana evaluasi <i>query</i>.
+            <br>
+            Biaya evaluasi <i>query</i> dapat  diukur dari banyaknya sumber daya (<i>resource</i>) sistem yang terpakai, 
+            meliputi pengaksesan disk, waktu CPU mengerjakan <i>query</i>, dan untuk sistem basis data paralel atau terdistribusi.
+            Pada sistem basis data yang besar dapat memberikan kontribusi biaya <i>query</i> yang dominan.
+            Perhitungan waktu CPU lebih sukar untuk diprediksikan, maka biaya pengeksekusian sebuah rencana <i>query</i> yaitu waktu 
+            yang dibutuhkan untuk pengaksesan ke disk.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <!-- section -->
+  <div class="section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="heading_main text_align_left">
+          <div class="left">
+            <p class="section_count">03</p>
+          </div>
+          <div class="right">
+            <p class="small_tag">--------</p>
+                <h2><span class="white_fonts">Query Processing</span> dalam <span class="white_fonts">Basis Data</span> </h2>
+                <p class="large">Bagaimana sebuah sistem database mengevaluasi sebuah ekspresi?</p>
+          </div>	
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- end section -->
+  
+    <!-- section -->
+    <div class="section dark_bg" id="definisi">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 white_fonts layout_padding padding_0">
+                  <p>
+                    Cara yang tepat untuk mengevaluasi ekspresi adalah dengan mengevaluasi satu operasi pada satu waktu, dalam urutan yang sesuai.
+                    Hasil dari setiap evaluasi adalah materialized
+                    Untuk mengevaluasi sebuah <i>query</i>,tidak hanya membutuhkan pembuatan ekpresi aljabar relasional, 
+                    tetapi juga mengetahui lebih jauh bagaimana hasil evaluasi  dari setiap operasi yg dapat dilakukan.
+                    Metode evaluasi <i>query</i> ada dua yaitu:
+                    <ol>
+                      <li>Materialization</li>
+                      hasil dari setiap operasi perantara dibuat dan kemudian digunakan untuk evaluasi
+                      dari operasi tingkat berikutnya. 
+                      Biaya evaluasi tidak hanya mencakup biaya operasi yang terlibat. Saat menghitung perikiraan biaya algoritma, biaya penulisan
+                      hasil operasi ke disk diabaikan. Untuk menghitung biaya evaluasi ekspresi , harus menambahkan biaya semua operasi, serta biaya penulisan
+                      hasil perantara disk.
+                      <li>Pipeline</li>
+                      Dengan menggunakan evaluasi ini, dapat meningkatkan efisiensi evaluasi query dengan mengurangi jumlah file sementara yang dihasilkan.
+                      Mencapai pengurangan dengan menggabungkan beberapa operasi rasional ke dalam jaringan pipeline of operation. Dimana hasil dari satu operasi dilalui bersamaan
+                      dengan operasi berikutnya di pipeline
+                    </ol> 
+                  </p>
+          </div>
+      </div>
+    </div>
+    <!-- end section -->
+
+    <!-- section -->
+    <div class="section layout_padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="full">
+                      <div class="heading_main text_align_left">
+            <div class="left">
+              <p class="section_count">04</p>
+            </div>
+            <div class="right">
+              <p class="small_tag">--------</p>
+                  <h2><span class="white_fonts">Query Processing</span> dalam <span class="white_fonts">Basis Data</span> </h2>
+                  <p class="large">bagaimana sebuah sistem database mengevaluasi multiple ekspresi?</p>
+            </div>	
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end section -->
+
+    <!-- section -->
+    <div class="section dark_bg" id="definisi">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 col-md-12 white_fonts layout_padding padding_0">
+                  <p>
+                    <i>Database Management System (DBMS)</i>
+                    menyediakan platform dan efisien untuk platform yang akan menggunakan ekspresi.  
+                    Ekspresi adalah cara yang baik untuk memodelkan kepentingan pengguna dalam data yang diharapkan. 
+                    Multiple ekspresi akan membuat proses penanganan kesalahan lebih sulit ketika kita perlu mengarahkan ulang baris yang salah karena kesalahan 
+                    disebabkan oleh salah satu ekspresi dan lebih sulit untuk mengetahui ekspresi mana yang menyebabkan kesalahan.
+                    <br>
+                    Telah dicatat bahwa kemampuan untuk mengelola Ekspresi dalam manajemen database
+                    system (DBMS) akan sangat berguna:
+                    <ol>
+                      <li>
+                        Manajemen Ekspresi dalam DBMS
+                        akan memfasilitasi penanganan Ekspresi yang efisien dengan menggunakan teknik seperti pengoptimalan query
+                        dan pengindeksan untuk menangani sejumlah besar Ekspresi secara efisien
+                      </li>
+                      <li>
+                        Penggabungan dukungan untuk mengekspresikan jenis data di DBMS
+                        memfasilitasi pengelolaan sejumlah besar Ekspresi dengan cara yang efisien dan terukur
+                      </li>
+                    </ol>
+                    Dengan subspansi pengguna dimodelkan sebagai ekspresi, setiap item data baru, sebuah
+                    publikasi baru, disesuaikan dengan semua ekspresi untuk menemukan ekspresi yang mengevaluasi yang
+                    benar. Perhatikan bahwa model pencocokan satu item data ini dengan banyak ekspresi di dalam
+                    model DBMS tradisional di mana satu query dievaluasi terhadap banyak baris. Saat
+                    menggunakan tipe data ekspresi, setiap item data (yang sesuai dengan baris dalam aplikasi DBMS) dievaluasi terhadap banyak ekspresi yang disebut sebagai
+                    <i>inverted data-query paradigm</i>.
+                  </p>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    <!-- end section -->  
+  </div>
+</div>
+</div>
+<!-- end section -->
+
+<!-- section -->
+<div class="section sumber">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12 col-md-12 layout_padding padding_0">
+              <h3 class="small-heading">Sumber</h3>
+              <p>
+                &rarr; Dissertations and Theses "Evaluation of Expressions with Uncertainty in Databases" Oleh Moginraj Mohandas dari University of New Orleans
+                <br>
+                &rarr; <a href="https://qwords.com/blog/query-database/">https://qwords.com/blog/query-database/</a>
+                <br>
+                &rarr; <a href="https://docplayer.info/37263061-Estimasi-query-sistem-basis-data-gentisya-tri-mardiani-m-kom.html">https://docplayer.info/37263061-Estimasi-query-sistem-basis-data-gentisya-tri-mardiani-m-kom.html</a>
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="about1">
+  <h2>ABOUT</h2>
+  <p class="small_tag">-----------</p>
+</div>
+
+<div class="container about">
+  <div class="box">
+    <div class="icon">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+    </div>
+    <div class="details">
+      <h3>Sinjai</h3>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="icon">
+      <i class="fa fa-github" aria-hidden="true"></i>
+    </div>
+    <div class="details">
+      <h3>KamtinaMusyfirah</h3>
+    </div>
+  </div>
+  
+  <div class="box">
+    <div class="icon">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+    </div>
+    <div class="details">
+      <h3>kamtinamusyfirah12@gmail.com</h3>
+    </div>
+  </div>
+</div>
+<!-- end section -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
